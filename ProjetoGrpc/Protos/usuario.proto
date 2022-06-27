@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option csharp_namespace = "ProjetoGrpc";
+
+package usuario;
+
+//Definição do Usuario
+service Usuario {
+  // Enviando
+  rpc EnvioUsuario (UsuarioRequest) returns (UsuarioReply);
+}
+
+// Request
+message UsuarioRequest {
+  string nome = 1;
+  string endereco = 2;
+  string email = 3;
+}
+
+// Response
+message UsuarioReply {
+  string nome = 1;
+  string endereco = 2;
+  string email = 3;
+  string mensagem = 4;
+}
