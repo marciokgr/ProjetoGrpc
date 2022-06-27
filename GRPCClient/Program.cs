@@ -1,6 +1,6 @@
 ﻿using Grpc.Net.Client;
 using ProjetoGrpc;
-using System.Net;
+//using System.Net;
 
 
 //Para http/3
@@ -10,7 +10,7 @@ var httpClient = new HttpClient();
 httpClient.DefaultRequestVersion = HttpVersion.Version30;
 httpClient.DefaultVersionPolicy = HttpVersionPolicy.RequestVersionExact;
 
-var channel = GrpcChannel.ForAddress("https://localhost:5001", new GrpcChannelOptions() { HttpClient = httpClient });
+var channel = GrpcChannel.ForAddress("https://localhost:7044", new GrpcChannelOptions() { HttpClient = httpClient });
 */
 
 
